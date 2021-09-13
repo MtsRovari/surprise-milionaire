@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/dialog_warning"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="25dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_dialog_confirmation">
+
+        <TextView
+            android:id="@+id/t_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="18sp"
+            android:layout_below="@+id/animation_lottie"
+            android:textStyle="bold"
+            android:text="Confirmação"
+            android:textColor="@color/defaultTextColor"/>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:alpha="0.2"
+            android:layout_below="@+id/t_title"
+            android:background="@color/colorPrimary"/>
+
+        <TextView
+            android:id="@+id/t_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:text="Você tem certeza que deseja continuar?"
+            android:textColor="@color/defaultTextColor"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:layout_below="@+id/view"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:text="Confirmando você não conseguirá reverter a ação."
+            android:textColor="@color/defaultTextColor"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/t_description"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_confirm_buy">
+
+            <TextView
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="CANCELAR"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:alpha="0.5"
+                android:layout_below="@+id/t_title"
+                android:background="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/btn_confirm"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="CONFIRMAR"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

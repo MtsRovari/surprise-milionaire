@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity"
+    android:background="#eeeeee">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/colorPrimary" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Olá, Lucas Montanini"
+        android:textSize="22sp"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp"
+                android:paddingTop="25dp"
+                android:paddingBottom="25dp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_default_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/defaultTextColor"
+                        android:text="SALDO DISPONÍVEL" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:orientation="horizontal"
+                            android:gravity="bottom">
+
+                            <TextView
+                                android:id="@+id/t_currency"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:textColor="@color/colorGold"
+                                android:text="BTC"
+                                android:layout_marginBottom="6dp"
+                                android:gravity="bottom"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/t_balance"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textColor="@color/colorGold"
+                                android:layout_marginRight="35dp"
+                                android:layout_marginLeft="5dp"
+                                android:textStyle="bold"
+                                android:gravity="bottom"
+                                android:textSize="32sp"
+                                android:singleLine="true"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view_balance"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:visibility="gone"
+                            android:layout_marginRight="35dp"
+                            android:background="@color/grey_10"/>
+
+                        <RelativeLayout
+                            android:id="@+id/lnl_balance_visibility"
+                            android:layout_width="wrap_content"
+                            android:layout_height="45dp"
+                            android:layout_alignParentRight="true">
+
+                            <ImageView
+                                android:id="@+id/ic_closed_eye"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_centerInParent="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_hided"
+                                app:tint="@color/defaultTextColor" />
+
+                            <ImageView
+                                android:id="@+id/ic_opened_eye"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_centerInParent="true"
+                                android:layout_centerVertical="true"
+                                android:visibility="gone"
+                                android:src="@drawable/ic_hide_balance"
+                                app:tint="@color/defaultTextColor" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/lnl_box"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/bg_default_card">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="COMPRAR CAIXAS"
+                    android:textColor="@color/defaultTextColor"
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="20dp"/>
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/ic_right_arrow"
+                    android:layout_gravity="right"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/t_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/defaultTextColor"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="25dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="MINHAS CAIXAS" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical" />
+
+            <RelativeLayout
+                android:id="@+id/lnl_open_box"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/bg_default_card">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MINHAS CAIXAS ABERTAS"
+                    android:textColor="@color/defaultTextColor"
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="20dp"/>
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/ic_right_arrow"
+                    android:layout_gravity="right"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lnl_statement"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bg_default_card">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HISTÓRICO DE COMPRAS"
+                    android:textColor="@color/defaultTextColor"
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="20dp"/>
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/ic_right_arrow"
+                    android:layout_gravity="right"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/bottom_sheet_behavior" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>

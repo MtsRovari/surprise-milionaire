@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Surprise Millionaire</string>
+
+    <!-- Api -->
+    <string name="timeout_exception">Tempo Esgotado</string>
+    <string name="unknown_exception">Verifique sua conexão</string>
+    <string name="unknown_host_exception">Verifique sua conexão</string>
+
+</resources>

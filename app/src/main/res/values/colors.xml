@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#37474f</color>
+    <color name="colorGold">#c8b900</color>
+    <color name="defaultTextColor">#424242</color>
+
+    <color name="graphUpColor">#08A889</color>
+    <color name="graphDownColor">#E64D4D</color>
+
+    <color name="colorGreyCard">#F6F6F6</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey_10">#e6e6e6</color>
+</resources>
